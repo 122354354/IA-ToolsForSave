@@ -1,9 +1,8 @@
 name: Build APK
-
 on:
   push:
     branches: [ "main" ]
-  workflow_dispatch: # 允许你在网页上手动点击运行
+  workflow_dispatch:
 
 jobs:
   build:
@@ -12,15 +11,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 使用 Flet 官方自动化工具，它会自动处理环境
       - name: Build APK
+        id: build
         uses: flet-dev/flet-build-action@v1
         with:
           target: apk
 
-      # 下载构建好的 APK
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: ArchiveApp-APK
-          path: ${{ steps.build.outputs.archive-path }} 
+          path: ${{ steps.build.outputs.archive-path }}
