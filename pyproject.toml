@@ -2,7 +2,7 @@
 name = "archive-app"
 version = "0.1.0"
 dependencies = [
-    "flet",
+    "flet==0.24.1",
     "internetarchive"
 ]
 
