@@ -1,20 +1,4 @@
 [project]
 name = "archive-app"
 version = "0.1.0"
-description = "A Flet app for Internet Archive"
-readme = "README.md"
-requires-python = ">=3.9"
-dependencies = [
-    "flet",
-    "internetarchive",
-]
-
-[tool.flet]
-product = "Archive App"
-org = "com.yourname"
-company = "Your Company"
-copyright = "Copyright (C) 2026 by Your Name"
-
-[tool.flet.app]
-path = "src"
-module = "main"
+dependencies = ["flet"]
