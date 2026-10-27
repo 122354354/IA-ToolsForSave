@@ -7,4 +7,4 @@ def main(page: ft.Page):
         ft.ElevatedButton("点我试试")
     )
 
-ft.app(target=main)
+ft.run(main)
