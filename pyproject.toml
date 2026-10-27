@@ -1,3 +1,10 @@
 [project]
 name = "archive-app"
 version = "0.1.0"
+dependencies = [
+    "flet",
+    "internetarchive"
+]
+
+[tool.flet.app]
+path = "src"
