@@ -2,14 +2,13 @@ import flet as ft
 
 def main(page: ft.Page):
     page.title = "档案馆助手"
-    page.bgcolor = "white" # 强制背景色
-    
+    page.bgcolor = "white"
     page.add(
-        ft.Text("恭喜！APK 打包成功！", size=30, color="teal", weight=ft.FontWeight.BOLD),
-        ft.Text("如果你看到了这行字，说明彻底搞定了！", size=16),
-        ft.ElevatedButton("点我试试")
+        ft.Text("终于出来了！", size=30, color="teal", weight=ft.FontWeight.BOLD),
+        ft.Text("经典版本渲染成功！", size=16)
     )
-    page.update() # 核心：强制刷新界面，消灭白屏
+    page.update()
 
 if __name__ == "__main__":
-    ft.run(main) # 新版 Flet 的正确启动方式
+    # 0.24.1 版本的标准写法
+    ft.app(target=main)
